@@ -61,6 +61,7 @@
             </div>
           </a>
 
+          <!-- Menu Desktop -->
           <nav class="hidden md:flex items-center gap-6 font-semibold text-sm">
             <a
               href="index.html"
@@ -137,7 +138,7 @@
         >
         <a
           href="galeri.html"
-          class="text-brand-blue border-b-2 border-brand-blue pb-1"
+          class="block py-1 text-slate-600 hover:text-brand-blue"
           >Galeri</a
         >
         <a
@@ -153,16 +154,29 @@
       </div>
     </header>
 
-    <!-- HERO SECTION -->
+    <!-- HERO BANNER DENGAN SILUET GEDUNG SEKOLAH -->
     <main class="flex-grow">
       <section
-        class="relative bg-gradient-to-b from-sky-50 via-white to-slate-50 py-16 lg:py-24"
+        class="relative bg-gradient-to-b from-sky-50 via-white to-slate-50 py-16 lg:py-24 overflow-hidden"
       >
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Siluet Latar Belakang Gedung Sekolah -->
+        <div
+          class="absolute inset-0 pointer-events-none flex items-end justify-center z-0"
+        >
+          <img
+            src="img/sekolah.png"
+            alt="Siluet Sekolah"
+            class="w-full max-w-5xl object-contain opacity-10 filter grayscale contrast-125 mb-[-20px]"
+            onerror="this.style.display = 'none'"
+          />
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <!-- Teks Banner -->
             <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
               <div
-                class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-100 text-brand-blue text-xs font-bold uppercase tracking-wider"
+                class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-sky-100 text-brand-blue text-xs font-bold uppercase tracking-wider shadow-sm"
               >
                 <i class="fa-solid fa-seedling"></i> Lembaga Pendidikan Anak
                 Usia Dini
@@ -186,7 +200,7 @@
               >
                 <a
                   href="spmb.html"
-                  class="inline-flex items-center justify-center gap-2 bg-brand-gold hover:bg-amber-600 text-white font-bold px-7 py-3.5 rounded-full shadow-lg transition"
+                  class="inline-flex items-center justify-center gap-2 bg-brand-gold hover:bg-amber-600 text-white font-bold px-7 py-3.5 rounded-full shadow-lg shadow-amber-500/20 transition"
                 >
                   <i class="fa-solid fa-file-pen"></i> Info SPMB Baru
                 </a>
@@ -195,21 +209,23 @@
                   class="inline-flex items-center justify-center gap-2 bg-white hover:bg-slate-100 text-slate-700 border border-slate-300 font-bold px-7 py-3.5 rounded-full transition"
                 >
                   <i class="fa-solid fa-users text-brand-blue"></i> Kenali Guru
-                  & Visi Kami
+                  & Visi
                 </a>
               </div>
             </div>
 
+            <!-- Foto Guru / Pengantar di Sisi Kanan -->
             <div class="lg:col-span-5 flex justify-center">
               <div
-                class="rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-white w-full max-w-md"
+                class="rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-white w-full max-w-md backdrop-blur-sm"
               >
                 <img
-                  src="img/Guru.png"
+                  src="img/guru.png"
                   alt="Dewan Guru TK St. Dominikus"
                   class="w-full h-80 object-cover"
                   onerror="
-                    this.src = 'https://placehold.co/600x400?text=Foto+Guru'
+                    this.src =
+                      'https://placehold.co/600x400?text=Foto+Dewan+Guru'
                   "
                 />
                 <div class="p-4 bg-sky-50 text-center">
@@ -226,8 +242,8 @@
         </div>
       </section>
 
-      <!-- KARTU MENU CEPAT -->
-      <section class="py-12 bg-white">
+      <!-- MENU CEPAT KARTU FITUR -->
+      <section class="py-12 bg-white border-t border-slate-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h3 class="text-xl font-bold text-brand-navy mb-8 text-center">
             Jelajahi Informasi Sekolah
@@ -242,9 +258,9 @@
               >
                 <i class="fa-solid fa-scroll"></i>
               </div>
-              <h4 class="font-bold text-slate-800">Profil & Visi Misi</h4>
+              <h4 class="font-bold text-slate-800">Profil & Guru</h4>
               <p class="text-xs text-slate-500 mt-1">
-                Arah kebijakan pendidikan dan perkenalan dewan guru.
+                Sambutan Kepsek dan dewan pendidik.
               </p>
             </a>
 
@@ -255,26 +271,26 @@
               <div
                 class="w-12 h-12 rounded-xl bg-brand-gold text-white flex items-center justify-center text-xl mx-auto mb-3 group-hover:scale-110 transition"
               >
-                <i class="fa-solid fa-heart"></i>
+                <i class="fa-solid fa-school"></i>
               </div>
-              <h4 class="font-bold text-slate-800">Tentang Kami</h4>
+              <h4 class="font-bold text-slate-800">Tentang Sekolah</h4>
               <p class="text-xs text-slate-500 mt-1">
-                Niat tulus cinta kasih dalam mengasuh putra-putri.
+                Lingkungan dan komitmen pelayanan.
               </p>
             </a>
 
             <a
-              href="program.html"
+              href="galeri.html"
               class="p-6 rounded-2xl bg-emerald-50 border border-emerald-100 hover:shadow-md transition text-center group"
             >
               <div
                 class="w-12 h-12 rounded-xl bg-emerald-500 text-white flex items-center justify-center text-xl mx-auto mb-3 group-hover:scale-110 transition"
               >
-                <i class="fa-solid fa-shapes"></i>
+                <i class="fa-solid fa-images"></i>
               </div>
-              <h4 class="font-bold text-slate-800">Program Belajar</h4>
+              <h4 class="font-bold text-slate-800">Galeri Foto</h4>
               <p class="text-xs text-slate-500 mt-1">
-                Aktivitas motorik, kognitif, doa, dan persiapan SD.
+                Dokumentasi sukacita siswa.
               </p>
             </a>
 
@@ -289,7 +305,7 @@
               </div>
               <h4 class="font-bold text-slate-800">Lokasi & Kontak</h4>
               <p class="text-xs text-slate-500 mt-1">
-                Alamat lengkap kami di Weepangali, Kota Tambolaka, SBD.
+                Peta dan alamat di Loura, SBD.
               </p>
             </a>
           </div>
@@ -304,7 +320,7 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
         <div class="flex items-center justify-center gap-3">
           <img
-            src="img/Logo.png"
+            src="img/logo.png"
             alt="Logo"
             class="w-9 h-9 object-contain"
             onerror="this.src = 'https://placehold.co/80x80?text=LOGO'"
@@ -314,7 +330,7 @@
           >
         </div>
         <p class="text-xs sm:text-sm text-slate-400 max-w-md mx-auto">
-          Weepangali, Kec. Kota Tambolaka, Kabupaten Sumba Barat Daya, NTT.
+          Weepangali, Kec. Loura, Kabupaten Sumba Barat Daya, NTT.
         </p>
         <div class="border-t border-slate-800 pt-6">
           <p class="text-xs text-slate-400">
