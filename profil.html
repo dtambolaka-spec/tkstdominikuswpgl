@@ -1,555 +1,236 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="id">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Profil, Sambutan & Guru - TK St. Dominikus Weepangali</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Poppins:wght@500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              brand: {
-                blue: "#0284c7",
-                navy: "#0f172a",
-                gold: "#f59e0b",
-                light: "#f8fafc",
-              },
-            },
-            fontFamily: { sans: ["Nunito", "Poppins", "sans-serif"] },
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profil, Sambutan & Dewan Guru - TK St. Dominikus Weepangali</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: { blue: '#0284c7', navy: '#0f172a', gold: '#f59e0b', light: '#f8fafc' }
           },
-        },
-      };
-    </script>
-  </head>
-  <body
-    class="bg-brand-light text-slate-700 font-sans flex flex-col min-h-screen"
-  >
-    <!-- NAVBAR -->
-    <header
-      class="sticky top-0 z-50 bg-white/95 backdrop-blur shadow-sm border-b border-slate-100"
-    >
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex items-center justify-between h-20">
-          <a href="index.html" class="flex items-center gap-3">
-            <img
-              src="img/logo.png"
-              alt="Logo TK St. Dominikus"
-              class="w-12 h-12 object-contain"
-              onerror="this.src = 'https://placehold.co/100x100?text=LOGO'"
-            />
-            <div>
-              <h1
-                class="font-extrabold text-base sm:text-lg text-brand-navy leading-tight"
-              >
-                TK ST. DOMINIKUS
-              </h1>
-              <p
-                class="text-xs tracking-wider text-brand-blue font-bold uppercase"
-              >
-                Weepangali
-              </p>
-            </div>
-          </a>
+          fontFamily: { sans: ['Nunito', 'Poppins', 'sans-serif'] }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-brand-light text-slate-700 font-sans flex flex-col min-h-screen">
 
-          <nav class="hidden md:flex items-center gap-6 font-semibold text-sm">
-            <a
-              href="index.html"
-              class="text-slate-600 hover:text-brand-blue transition"
-              >Beranda</a
-            >
-            <a
-              href="profil.html"
-              class="text-brand-blue border-b-2 border-brand-blue pb-1"
-              >Profil & Guru</a
-            >
-            <a
-              href="tentang.html"
-              class="text-slate-600 hover:text-brand-blue transition"
-              >Tentang Kami</a
-            >
-            <a
-              href="program.html"
-              class="text-slate-600 hover:text-brand-blue transition"
-              >Program Belajar</a
-            >
-            <a
-              href="kontak.html"
-              class="text-slate-600 hover:text-brand-blue transition"
-              >Kontak</a
-            >
-            <a
-              href="spmb.html"
-              class="bg-brand-gold hover:bg-amber-600 text-white px-5 py-2 rounded-full shadow transition"
-            >
-              <i class="fa-solid fa-graduation-cap mr-1"></i> SPMB Baru
-            </a>
-          </nav>
-
-          <div class="md:hidden">
-            <button
-              id="menu-btn"
-              class="p-2 text-slate-600 hover:text-brand-blue"
-              aria-label="Toggle Menu"
-            >
-              <i class="fa-solid fa-bars text-2xl"></i>
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Mobile Dropdown -->
-      <div
-        id="mobile-menu"
-        class="hidden md:hidden bg-white border-t border-slate-100 px-6 py-4 space-y-3 font-semibold shadow-lg"
-      >
-        <a
-          href="index.html"
-          class="block py-1 text-slate-600 hover:text-brand-blue"
-          >Beranda</a
-        >
-        <a href="profil.html" class="block py-1 text-brand-blue font-bold"
-          >Profil & Guru</a
-        >
-        <a
-          href="tentang.html"
-          class="block py-1 text-slate-600 hover:text-brand-blue"
-          >Tentang Kami</a
-        >
-        <a
-          href="program.html"
-          class="block py-1 text-slate-600 hover:text-brand-blue"
-          >Program Belajar</a
-        >
-        <a
-          href="kontak.html"
-          class="block py-1 text-slate-600 hover:text-brand-blue"
-          >Kontak</a
-        >
-        <a
-          href="spmb.html"
-          class="block text-center bg-brand-gold text-white py-2 rounded-full shadow"
-          >SPMB Baru</a
-        >
-      </div>
-    </header>
-
-    <!-- MAIN CONTENT -->
-    <main class="flex-grow py-12">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
-        <!-- ================= 1. SAMBUTAN KEPALA SEKOLAH ================= -->
-        <section
-          class="bg-white p-6 sm:p-10 rounded-3xl shadow-sm border border-slate-100"
-        >
-          <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-            <!-- Foto Kepsek -->
-            <div class="lg:col-span-5 flex flex-col items-center text-center">
-              <div
-                class="relative rounded-3xl overflow-hidden shadow-xl border-4 border-white bg-slate-100 w-full max-w-xs aspect-[4/5]"
-              >
-                <img
-                  src="img/kepsek.png"
-                  alt="Kepala Sekolah Agnes Geli"
-                  class="w-full h-full object-cover"
-                  onerror="
-                    this.src = 'https://placehold.co/400x500?text=Foto+Kepsek'
-                  "
-                />
-              </div>
-              <div class="mt-4">
-                <h3 class="text-xl font-black text-brand-navy">Agnes Geli</h3>
-                <p class="text-xs sm:text-sm font-semibold text-brand-blue">
-                  Kepala Sekolah TK St. Dominikus Weepangali
-                </p>
-              </div>
-            </div>
-
-            <!-- Teks Sambutan -->
-            <div class="lg:col-span-7 space-y-4">
-              <div
-                class="inline-flex items-center gap-2 px-3 py-1 bg-sky-100 text-brand-blue rounded-full text-xs font-bold uppercase tracking-wide"
-              >
-                <i class="fa-solid fa-quote-left"></i> Sambutan Kepala Sekolah
-              </div>
-              <h2
-                class="text-2xl sm:text-3xl font-black text-brand-navy leading-tight"
-              >
-                Mendidik dengan Hati, Menumbuhkan Generasi Beriman dan
-                Berkarakter
-              </h2>
-              <div
-                class="space-y-3 text-slate-600 text-sm sm:text-base leading-relaxed text-justify"
-              >
-                <p>
-                  <strong>Salam Sejahtera dalam Kasih Tuhan,</strong>
-                </p>
-                <p>
-                  Puji dan syukur kita panjatkan ke hadirat Tuhan Yang Maha Esa
-                  atas rahmat dan penyertaan-Nya, sehingga TK St. Dominikus
-                  Weepangali dapat terus melayani dan mendampingi putra-putri
-                  tunas bangsa di Sumba Barat Daya.
-                </p>
-                <p>
-                  Pendidikan anak usia dini adalah masa emas (*golden age*) yang
-                  menjadi fondasi utama tumbuh kembang anak. Berlandaskan rasa
-                  mencintai, menyayangi, dan ketulusan hati, kami berkomitmen
-                  menghadirkan ruang belajar yang ramah, aman, serta penuh
-                  sukacita lewat metode bermain sambil belajar.
-                </p>
-                <p>
-                  Bersama dewan guru yang berdedikasi, kami mendidik anak-anak
-                  agar cakap menyongsong jenjang Sekolah Dasar, sekaligus
-                  membentuk pribadi yang berani, cerdas, sehat, santun, serta
-                  senantiasa takut akan Tuhan.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- ================= 2. DEWAN GURU & TENAGA PENDIDIK ================= -->
-        <section class="space-y-8">
-          <div class="text-center max-w-2xl mx-auto space-y-2">
-            <span
-              class="text-brand-blue font-extrabold tracking-wider uppercase text-xs"
-              >Tenaga Pendidik</span
-            >
-            <h2 class="text-2xl sm:text-3xl font-black text-brand-navy">
-              Dewan Guru Pengajar
-            </h2>
-            <p class="text-slate-500 text-sm">
-              Pendidik yang berdedikasi, kreatif, penuh kesabaran, dan kasih
-              keibuan.
-            </p>
-          </div>
-
-          <!-- Foto Kolektif Guru -->
-          <div
-            class="rounded-3xl overflow-hidden shadow border-4 border-white bg-slate-100 max-w-3xl mx-auto"
-          >
-            <img
-              src="img/guru.png"
-              alt="Dewan Guru TK St. Dominikus"
-              class="w-full h-72 sm:h-96 object-cover"
-              onerror="
-                this.src = 'https://placehold.co/800x450?text=Foto+Bersama+Guru'
-              "
-            />
-            <div
-              class="p-3 bg-white text-center text-xs text-slate-500 font-medium border-t border-slate-100"
-            >
-              Dewan Guru dan Tenaga Pendidik TK St. Dominikus Weepangali
-            </div>
-          </div>
-
-          <!-- Kartu Daftar Nama Guru -->
-          <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-4xl mx-auto">
-            <div
-              class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm text-center space-y-2"
-            >
-              <div
-                class="w-14 h-14 rounded-full bg-sky-100 text-brand-blue flex items-center justify-center text-2xl mx-auto mb-3"
-              >
-                <i class="fa-solid fa-chalkboard-user"></i>
-              </div>
-              <h3 class="font-bold text-base text-brand-navy">
-                Martha Yuliana Andolo
-              </h3>
-              <p class="text-xs text-brand-blue font-semibold uppercase">
-                Guru Pengajar
-              </p>
-            </div>
-
-            <div
-              class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm text-center space-y-2"
-            >
-              <div
-                class="w-14 h-14 rounded-full bg-amber-100 text-brand-gold flex items-center justify-center text-2xl mx-auto mb-3"
-              >
-                <i class="fa-solid fa-chalkboard-user"></i>
-              </div>
-              <h3 class="font-bold text-base text-brand-navy">Fertiana Loba</h3>
-              <p class="text-xs text-brand-gold font-semibold uppercase">
-                Guru Pengajar
-              </p>
-            </div>
-
-            <div
-              class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm text-center space-y-2"
-            >
-              <div
-                class="w-14 h-14 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center text-2xl mx-auto mb-3"
-              >
-                <i class="fa-solid fa-chalkboard-user"></i>
-              </div>
-              <h3 class="font-bold text-base text-brand-navy">
-                Maria Imakulata Tako
-              </h3>
-              <p class="text-xs text-emerald-600 font-semibold uppercase">
-                Guru Pengajar
-              </p>
-            </div>
-          </div>
-        </section>
-
-        <!-- ================= 3. GALERI SUASANA KEGIATAN ANAK ================= -->
-        <section class="space-y-8">
-          <div class="text-center max-w-2xl mx-auto space-y-2">
-            <span
-              class="text-brand-blue font-extrabold tracking-wider uppercase text-xs"
-              >Dokumentasi</span
-            >
-            <h2 class="text-2xl sm:text-3xl font-black text-brand-navy">
-              Suasana Kegiatan di Sekolah
-            </h2>
-            <p class="text-slate-500 text-sm">
-              Momen ceria anak-anak saat belajar, berkreasi, dan bermain di
-              lingkungan TK St. Dominikus Weepangali.
-            </p>
-          </div>
-
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            <!-- Foto Kegiatan 1 -->
-            <div
-              class="bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-100 group"
-            >
-              <div class="h-48 overflow-hidden bg-slate-100">
-                <img
-                  src="img/kegiatan1.png"
-                  alt="Kegiatan Siswa 1"
-                  class="w-full h-full object-cover group-hover:scale-105 transition duration-300"
-                  onerror="
-                    this.src = 'https://placehold.co/400x300?text=Kegiatan+1'
-                  "
-                />
-              </div>
-              <div class="p-4 text-center">
-                <h4 class="font-bold text-slate-800 text-sm">
-                  Pembiasaan & Doa
-                </h4>
-                <p class="text-xs text-slate-500 mt-1">
-                  Membina iman sejak awal
-                </p>
-              </div>
-            </div>
-
-            <!-- Foto Kegiatan 2 -->
-            <div
-              class="bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-100 group"
-            >
-              <div class="h-48 overflow-hidden bg-slate-100">
-                <img
-                  src="img/kegiatan2.png"
-                  alt="Kegiatan Siswa 2"
-                  class="w-full h-full object-cover group-hover:scale-105 transition duration-300"
-                  onerror="
-                    this.src = 'https://placehold.co/400x300?text=Kegiatan+2'
-                  "
-                />
-              </div>
-              <div class="p-4 text-center">
-                <h4 class="font-bold text-slate-800 text-sm">
-                  Belajar Sambil Bermain
-                </h4>
-                <p class="text-xs text-slate-500 mt-1">
-                  Eksplorasi motorik halus
-                </p>
-              </div>
-            </div>
-
-            <!-- Foto Kegiatan 3 -->
-            <div
-              class="bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-100 group"
-            >
-              <div class="h-48 overflow-hidden bg-slate-100">
-                <img
-                  src="img/kegiatan3.png"
-                  alt="Kegiatan Siswa 3"
-                  class="w-full h-full object-cover group-hover:scale-105 transition duration-300"
-                  onerror="
-                    this.src = 'https://placehold.co/400x300?text=Kegiatan+3'
-                  "
-                />
-              </div>
-              <div class="p-4 text-center">
-                <h4 class="font-bold text-slate-800 text-sm">
-                  Kreativitas & Seni
-                </h4>
-                <p class="text-xs text-slate-500 mt-1">
-                  Mengasah imajinasi anak
-                </p>
-              </div>
-            </div>
-
-            <!-- Foto Kegiatan 4 -->
-            <div
-              class="bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-100 group"
-            >
-              <div class="h-48 overflow-hidden bg-slate-100">
-                <img
-                  src="img/kegiatan4.png"
-                  alt="Kegiatan Siswa 4"
-                  class="w-full h-full object-cover group-hover:scale-105 transition duration-300"
-                  onerror="
-                    this.src = 'https://placehold.co/400x300?text=Kegiatan+4'
-                  "
-                />
-              </div>
-              <div class="p-4 text-center">
-                <h4 class="font-bold text-slate-800 text-sm">
-                  Kebersamaan di Kelas
-                </h4>
-                <p class="text-xs text-slate-500 mt-1">
-                  Menumbuhkan sikap santun
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- ================= 4. VISI, MISI & TUJUAN LENGKAP ================= -->
-        <section class="space-y-10 pt-4">
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div class="p-8 rounded-3xl bg-sky-50 border border-sky-100">
-              <div
-                class="inline-block px-3 py-1 bg-brand-blue text-white rounded-full text-xs font-bold uppercase mb-4"
-              >
-                VISI KAMI
-              </div>
-              <p
-                class="text-slate-700 italic leading-relaxed text-sm sm:text-base font-medium"
-              >
-                "Berawal dari rasa Mencintai, Menyayangi, dan rasa memiliki
-                serta senang dengan anak-anak maka kami dengan niat yang tulus
-                sesuai kesanggupan kami mau melayani, menyelenggarakan dan
-                menciptakan anak – anak usia dini yang berani, Cerdas, Sehat dan
-                berprilaku baik serta takut akan TUHAN melalui proses belajar
-                mengajar bermain Sambil Belajar, belajar bermain seraya bermain
-                yang nyaman dan menyenangkan."
-              </p>
-            </div>
-
-            <div class="p-8 rounded-3xl bg-amber-50 border border-amber-100">
-              <div
-                class="inline-block px-3 py-1 bg-brand-gold text-white rounded-full text-xs font-bold uppercase mb-4"
-              >
-                TUJUAN KAMI
-              </div>
-              <p
-                class="text-slate-700 leading-relaxed text-sm sm:text-base font-medium"
-              >
-                "Semoga anak – anak yang di titipkan orang tua di lembaga ini
-                menjadi anak - anak yang baik, cerdas, sehat serta anak yang
-                dapat diharapkan oleh orang tua bangsa dan Negara."
-              </p>
-            </div>
-          </div>
-
+  <!-- NAVBAR -->
+  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur shadow-sm border-b border-slate-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <a href="index.html" class="flex items-center gap-3">
+          <img src="img/logo.png" alt="Logo TK St. Dominikus" class="w-12 h-12 object-contain" onerror="this.src='https://placehold.co/100x100?text=LOGO'">
           <div>
-            <h3
-              class="text-xl sm:text-2xl font-black text-brand-navy text-center mb-6"
-            >
-              4 Misi Utama Kami
-            </h3>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-              <div
-                class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm"
-              >
-                <span class="text-3xl font-black text-brand-blue block mb-2"
-                  >01</span
-                >
-                <p class="text-sm font-semibold text-slate-800">
-                  Membentuk Generasi Yang Beriman Kepada Tuhan Yang Maha Esa.
-                </p>
-              </div>
-              <div
-                class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm"
-              >
-                <span class="text-3xl font-black text-brand-gold block mb-2"
-                  >02</span
-                >
-                <p class="text-sm font-semibold text-slate-800">
-                  Meningkatkan Pengetahuan dan Ketrampilan yang kreatif bagi
-                  pendidik agar dapat menciptakan anak-anak usia dini yang juga
-                  kreatif, berperilaku baik, cerdas, sehat, dan siap lanjut
-                  studi.
-                </p>
-              </div>
-              <div
-                class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm"
-              >
-                <span class="text-3xl font-black text-emerald-500 block mb-2"
-                  >03</span
-                >
-                <p class="text-sm font-semibold text-slate-800">
-                  Menyiapkan program pendidikan yang baik agar anak dapat cakap
-                  untuk lanjut ke pendidikan Dasar yaitu SD.
-                </p>
-              </div>
-              <div
-                class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm"
-              >
-                <span class="text-3xl font-black text-purple-500 block mb-2"
-                  >04</span
-                >
-                <p class="text-sm font-semibold text-slate-800">
-                  Menyiapkan Program Pengembangan Karakter yang baik dan
-                  beretika (Santun).
-                </p>
-              </div>
+            <h1 class="font-extrabold text-base sm:text-lg text-brand-navy leading-tight">TK ST. DOMINIKUS</h1>
+            <p class="text-xs tracking-wider text-brand-blue font-bold uppercase">Weepangali</p>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex items-center gap-6 font-semibold text-sm">
+          <a href="index.html" class="text-slate-600 hover:text-brand-blue transition">Beranda</a>
+          <a href="profil.html" class="text-brand-blue border-b-2 border-brand-blue pb-1">Profil & Guru</a>
+          <a href="tentang.html" class="text-slate-600 hover:text-brand-blue transition">Tentang Kami</a>
+          <a href="program.html" class="text-slate-600 hover:text-brand-blue transition">Program Belajar</a>
+          <a href="galeri.html" class="text-slate-600 hover:text-brand-blue transition">Galeri</a>
+          <a href="kontak.html" class="text-slate-600 hover:text-brand-blue transition">Kontak</a>
+          <a href="spmb.html" class="bg-brand-gold hover:bg-amber-600 text-white px-5 py-2 rounded-full shadow transition">
+            <i class="fa-solid fa-graduation-cap mr-1"></i> SPMB Baru
+          </a>
+        </nav>
+
+        <div class="md:hidden">
+          <button id="menu-btn" class="p-2 text-slate-600 hover:text-brand-blue" aria-label="Toggle Menu">
+            <i class="fa-solid fa-bars text-2xl"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 px-6 py-4 space-y-3 font-semibold shadow-lg">
+      <a href="index.html" class="block py-1 text-slate-600 hover:text-brand-blue">Beranda</a>
+      <a href="profil.html" class="block py-1 text-brand-blue font-bold">Profil & Guru</a>
+      <a href="tentang.html" class="block py-1 text-slate-600 hover:text-brand-blue">Tentang Kami</a>
+      <a href="program.html" class="block py-1 text-slate-600 hover:text-brand-blue">Program Belajar</a>
+      <a href="galeri.html" class="block py-1 text-slate-600 hover:text-brand-blue">Galeri</a>
+      <a href="kontak.html" class="block py-1 text-slate-600 hover:text-brand-blue">Kontak</a>
+      <a href="spmb.html" class="block text-center bg-brand-gold text-white py-2 rounded-full shadow">SPMB Baru</a>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="flex-grow py-12">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+      
+      <!-- ================= 1. SAMBUTAN KEPALA SEKOLAH ================= -->
+      <section class="bg-white p-6 sm:p-10 rounded-3xl shadow-sm border border-slate-100">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+          
+          <div class="lg:col-span-5 flex flex-col items-center text-center">
+            <div class="relative rounded-3xl overflow-hidden shadow-xl border-4 border-white bg-slate-100 w-full max-w-xs aspect-[4/5]">
+              <img src="img/kepsek.png" alt="Kepala Sekolah Agnes Geli" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/400x500?text=Foto+Kepsek'">
+            </div>
+            <div class="mt-4">
+              <h3 class="text-xl font-black text-brand-navy">Agnes Geli</h3>
+              <p class="text-xs sm:text-sm font-semibold text-brand-blue">Kepala Sekolah TK St. Dominikus Weepangali</p>
             </div>
           </div>
-        </section>
-      </div>
-    </main>
 
-    <!-- FOOTER -->
-    <footer
-      class="bg-brand-navy text-slate-400 py-10 border-t border-slate-800 mt-auto"
-    >
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
-        <div class="flex items-center justify-center gap-3">
-          <img
-            src="img/logo.png"
-            alt="Logo"
-            class="w-9 h-9 object-contain"
-            onerror="this.src = 'https://placehold.co/80x80?text=LOGO'"
-          />
-          <span class="font-extrabold text-white text-base tracking-wide"
-            >TK ST. DOMINIKUS WEEPANGALI</span
-          >
-        </div>
-        <p class="text-xs sm:text-sm text-slate-400 max-w-md mx-auto">
-          Weepangali, Kec. Kota Tambolaka, Kabupaten Sumba Barat Daya, NTT.
-        </p>
-        <div class="border-t border-slate-800 pt-6">
-          <p class="text-xs text-slate-400">
-            © 2026 TK St. Dominikus Weepangali. All Rights Reserved.
-          </p>
-          <p
-            class="text-xs font-semibold text-brand-gold mt-1 uppercase tracking-wider"
-          >
-            Developer by Andri Geli
-          </p>
-        </div>
-      </div>
-    </footer>
+          <div class="lg:col-span-7 space-y-4">
+            <div class="inline-flex items-center gap-2 px-3 py-1 bg-sky-100 text-brand-blue rounded-full text-xs font-bold uppercase tracking-wide">
+              <i class="fa-solid fa-quote-left"></i> Sambutan Kepala Sekolah
+            </div>
+            <h2 class="text-2xl sm:text-3xl font-black text-brand-navy leading-tight">
+              Mendidik dengan Hati, Menumbuhkan Generasi Beriman dan Berkarakter
+            </h2>
+            <div class="space-y-3 text-slate-600 text-sm sm:text-base leading-relaxed text-justify">
+              <p><strong>Salam Sejahtera dalam Kasih Tuhan,</strong></p>
+              <p>
+                Puji dan syukur kita panjatkan ke hadirat Tuhan Yang Maha Esa atas rahmat dan penyertaan-Nya, sehingga TK St. Dominikus Weepangali dapat terus melayani dan mendampingi putra-putri tunas bangsa di Sumba Barat Daya.
+              </p>
+              <p>
+                Pendidikan anak usia dini adalah masa emas (<em>golden age</em>) yang menjadi fondasi utama tumbuh kembang anak. Berlandaskan rasa mencintai, menyayangi, dan ketulusan hati, kami berkomitmen menghadirkan ruang belajar yang ramah, aman, serta penuh sukacita lewat metode bermain sambil belajar.
+              </p>
+              <p>
+                Bersama dewan guru yang berdedikasi, kami mendidik anak-anak agar cakap menyongsong jenjang Sekolah Dasar, sekaligus membentuk pribadi yang berani, cerdas, sehat, santun, serta senantiasa takut akan Tuhan.
+              </p>
+            </div>
+          </div>
 
-    <script>
-      const menuBtn = document.getElementById("menu-btn");
-      const mobileMenu = document.getElementById("mobile-menu");
-      menuBtn.addEventListener("click", () =>
-        mobileMenu.classList.toggle("hidden"),
-      );
-    </script>
-  </body>
+        </div>
+      </section>
+
+      <!-- ================= 2. DEWAN GURU DENGAN FOTO INDIVIDUAL ================= -->
+      <section class="space-y-8">
+        <div class="text-center max-w-2xl mx-auto space-y-2">
+          <span class="text-brand-blue font-extrabold tracking-wider uppercase text-xs">Tenaga Pendidik</span>
+          <h2 class="text-2xl sm:text-3xl font-black text-brand-navy">Dewan Guru Pengajar</h2>
+          <p class="text-slate-500 text-sm">Pendidik yang berdedikasi, sabar, kreatif, dan mengasuh anak-anak dengan kasih sayang.</p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          
+          <!-- Guru 1: Martha Yuliana Andolo (marlis.png) -->
+          <div class="bg-white rounded-3xl overflow-hidden shadow-sm border border-slate-100 hover:shadow-lg transition duration-300 text-center group">
+            <div class="h-72 overflow-hidden bg-slate-100 border-b border-slate-100">
+              <img src="img/marlis.png" alt="Martha Yuliana Andolo" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" onerror="this.src='https://placehold.co/400x500?text=Foto+Marlis'">
+            </div>
+            <div class="p-6">
+              <h3 class="font-extrabold text-lg text-brand-navy">Martha Yuliana Andolo</h3>
+              <span class="inline-block mt-1 px-3 py-0.5 bg-sky-100 text-brand-blue rounded-full text-xs font-bold uppercase tracking-wider">
+                Guru Pengajar
+              </span>
+              <p class="text-xs text-slate-500 mt-2">TK St. Dominikus Weepangali</p>
+            </div>
+          </div>
+
+          <!-- Guru 2: Fertiana Loba (fertiana.png) -->
+          <div class="bg-white rounded-3xl overflow-hidden shadow-sm border border-slate-100 hover:shadow-lg transition duration-300 text-center group">
+            <div class="h-72 overflow-hidden bg-slate-100 border-b border-slate-100">
+              <img src="img/fertiana.png" alt="Fertiana Loba" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" onerror="this.src='https://placehold.co/400x500?text=Foto+Fertiana'">
+            </div>
+            <div class="p-6">
+              <h3 class="font-extrabold text-lg text-brand-navy">Fertiana Loba</h3>
+              <span class="inline-block mt-1 px-3 py-0.5 bg-amber-100 text-brand-gold rounded-full text-xs font-bold uppercase tracking-wider">
+                Guru Pengajar
+              </span>
+              <p class="text-xs text-slate-500 mt-2">TK St. Dominikus Weepangali</p>
+            </div>
+          </div>
+
+          <!-- Guru 3: Maria Imakulata Tako (ima.png) -->
+          <div class="bg-white rounded-3xl overflow-hidden shadow-sm border border-slate-100 hover:shadow-lg transition duration-300 text-center group">
+            <div class="h-72 overflow-hidden bg-slate-100 border-b border-slate-100">
+              <img src="img/ima.png" alt="Maria Imakulata Tako" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" onerror="this.src='https://placehold.co/400x500?text=Foto+Ima'">
+            </div>
+            <div class="p-6">
+              <h3 class="font-extrabold text-lg text-brand-navy">Maria Imakulata Tako</h3>
+              <span class="inline-block mt-1 px-3 py-0.5 bg-emerald-100 text-emerald-600 rounded-full text-xs font-bold uppercase tracking-wider">
+                Guru Pengajar
+              </span>
+              <p class="text-xs text-slate-500 mt-2">TK St. Dominikus Weepangali</p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ================= 3. VISI, MISI & TUJUAN LENGKAP ================= -->
+      <section class="space-y-10 pt-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          
+          <div class="p-8 rounded-3xl bg-sky-50 border border-sky-100">
+            <div class="inline-block px-3 py-1 bg-brand-blue text-white rounded-full text-xs font-bold uppercase mb-4">VISI KAMI</div>
+            <p class="text-slate-700 italic leading-relaxed text-sm sm:text-base font-medium">
+              "Berawal dari rasa Mencintai, Menyayangi, dan rasa memiliki serta senang dengan anak-anak maka kami dengan niat yang tulus sesuai kesanggupan kami mau melayani, menyelenggarakan dan menciptakan anak – anak usia dini yang berani, Cerdas, Sehat dan berprilaku baik serta takut akan TUHAN melalui proses belajar mengajar bermain Sambil Belajar, belajar bermain seraya bermain yang nyaman dan menyenangkan."
+            </p>
+          </div>
+
+          <div class="p-8 rounded-3xl bg-amber-50 border border-amber-100">
+            <div class="inline-block px-3 py-1 bg-brand-gold text-white rounded-full text-xs font-bold uppercase mb-4">TUJUAN KAMI</div>
+            <p class="text-slate-700 leading-relaxed text-sm sm:text-base font-medium">
+              "Semoga anak – anak yang di titipkan orang tua di lembaga ini menjadi anak - anak yang baik, cerdas, sehat serta anak yang dapat diharapkan oleh orang tua bangsa dan Negara."
+            </p>
+          </div>
+
+        </div>
+
+        <div>
+          <h3 class="text-xl sm:text-2xl font-black text-brand-navy text-center mb-6">4 Misi Utama Kami</h3>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+              <span class="text-3xl font-black text-brand-blue block mb-2">01</span>
+              <p class="text-sm font-semibold text-slate-800">Membentuk Generasi Yang Beriman Kepada Tuhan Yang Maha Esa.</p>
+            </div>
+            <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+              <span class="text-3xl font-black text-brand-gold block mb-2">02</span>
+              <p class="text-sm font-semibold text-slate-800">Meningkatkan Pengetahuan dan Ketrampilan yang kreatif bagi pendidik agar dapat menciptakan anak-anak usia dini yang juga kreatif, berperilaku baik, cerdas, sehat, dan siap lanjut studi.</p>
+            </div>
+            <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+              <span class="text-3xl font-black text-emerald-500 block mb-2">03</span>
+              <p class="text-sm font-semibold text-slate-800">Menyiapkan program pendidikan yang baik agar anak dapat cakap untuk lanjut ke pendidikan Dasar yaitu SD.</p>
+            </div>
+            <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+              <span class="text-3xl font-black text-purple-500 block mb-2">04</span>
+              <p class="text-sm font-semibold text-slate-800">Menyiapkan Program Pengembangan Karakter yang baik dan beretika (Santun).</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-brand-navy text-slate-400 py-10 border-t border-slate-800 mt-auto">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
+      <div class="flex items-center justify-center gap-3">
+        <img src="img/logo.png" alt="Logo" class="w-9 h-9 object-contain" onerror="this.src='https://placehold.co/80x80?text=LOGO'">
+        <span class="font-extrabold text-white text-base tracking-wide">TK ST. DOMINIKUS WEEPANGALI</span>
+      </div>
+      <p class="text-xs sm:text-sm text-slate-400 max-w-md mx-auto">
+        Weepangali, Kec. Loura, Kabupaten Sumba Barat Daya, NTT.
+      </p>
+      <div class="border-t border-slate-800 pt-6">
+        <p class="text-xs text-slate-400">© 2026 TK St. Dominikus Weepangali. All Rights Reserved.</p>
+        <p class="text-xs font-semibold text-brand-gold mt-1 uppercase tracking-wider">Developer by Andri Geli</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+  </script>
+</body>
 </html>
