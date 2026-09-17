@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://dtambolaka-spec.github.io/tkstdominikuswpgl/sitemap.xml
