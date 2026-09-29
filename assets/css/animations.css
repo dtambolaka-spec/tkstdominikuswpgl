@@ -1,0 +1,79 @@
+/* ===== Animasi Website TK St. Dominikus ===== */
+
+/* Ticker Tentang Kami khusus Beranda */
+.home-about-ticker {
+  position: relative;
+  z-index: 20;
+  overflow: hidden;
+  width: 100%;
+  background: linear-gradient(90deg, #0284c7, #0369a1, #0284c7);
+  color: #fff;
+  border-bottom: 1px solid rgba(255,255,255,.18);
+  box-shadow: 0 4px 14px rgba(15,23,42,.10);
+}
+.ticker-track {
+  display: flex;
+  width: max-content;
+  animation: tickerMove 30s linear infinite;
+}
+.ticker-content {
+  display: flex;
+  align-items: center;
+  gap: 2.25rem;
+  min-height: 46px;
+  padding-right: 2.25rem;
+  white-space: nowrap;
+  font-size: .9rem;
+  font-weight: 700;
+  letter-spacing: .01em;
+}
+.ticker-label {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  font-weight: 900;
+  letter-spacing: .08em;
+}
+.ticker-dot { opacity: .75; font-size: 1.1rem; }
+@keyframes tickerMove {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.home-about-ticker:hover .ticker-track { animation-play-state: paused; }
+
+/* Animasi teks halaman */
+.page-text-animate {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity .7s ease, transform .7s cubic-bezier(.2,.65,.3,1);
+  will-change: opacity, transform;
+}
+.page-text-animate.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Animasi elemen konten agar halaman terasa lebih hidup */
+.page-card-animate {
+  opacity: 0;
+  transform: translateY(18px) scale(.985);
+  transition: opacity .65s ease, transform .65s cubic-bezier(.2,.65,.3,1);
+}
+.page-card-animate.is-visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ticker-track { animation: none; }
+  .page-text-animate, .page-card-animate {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .ticker-content { min-height: 42px; font-size: .78rem; gap: 1.5rem; padding-right: 1.5rem; }
+  .ticker-track { animation-duration: 24s; }
+}
