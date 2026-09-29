@@ -17,8 +17,6 @@
       href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Poppins:wght@500;600;700&display=swap"
       rel="stylesheet"
     />
-       <!-- Favicon -->
-    <link rel="icon" href="img/logo.png" type="image/png" />
     <script>
       tailwind.config = {
         theme: {
@@ -36,6 +34,7 @@
         },
       };
     </script>
+      <link rel="stylesheet" href="assets/css/animations.css" />
   </head>
   <body
     class="bg-brand-light text-slate-700 font-sans flex flex-col min-h-screen"
@@ -159,6 +158,27 @@
         >
       </div>
     </header>
+
+
+    <!-- TICKER TENTANG KAMI -->
+    <section class="home-about-ticker" aria-label="Tentang Kami">
+      <div class="ticker-track">
+        <div class="ticker-content">
+          <span class="ticker-label"><i class="fa-solid fa-school"></i> TENTANG KAMI</span>
+          <span>TK St. Dominikus Weepangali hadir mendampingi anak tumbuh cerdas, sehat, santun, beriman, dan berkarakter.</span>
+          <span class="ticker-dot">✦</span>
+          <span>Pendidikan dengan kasih, bermain sambil belajar, dan bertumbuh bersama.</span>
+          <span class="ticker-dot">✦</span>
+        </div>
+        <div class="ticker-content" aria-hidden="true">
+          <span class="ticker-label"><i class="fa-solid fa-school"></i> TENTANG KAMI</span>
+          <span>TK St. Dominikus Weepangali hadir mendampingi anak tumbuh cerdas, sehat, santun, beriman, dan berkarakter.</span>
+          <span class="ticker-dot">✦</span>
+          <span>Pendidikan dengan kasih, bermain sambil belajar, dan bertumbuh bersama.</span>
+          <span class="ticker-dot">✦</span>
+        </div>
+      </div>
+    </section>
 
     <!-- HERO BANNER DENGAN SILUET GEDUNG SEKOLAH -->
     <main class="flex-grow">
@@ -358,5 +378,6 @@
         mobileMenu.classList.toggle("hidden"),
       );
     </script>
+      <script src="assets/js/animations.js" defer></script>
   </body>
 </html>
